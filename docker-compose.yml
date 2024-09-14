@@ -25,7 +25,6 @@ services:
     networks:
       - dev
 
-
   comments_service:
     build:
       context: ./comments_service
@@ -49,6 +48,10 @@ services:
     container_name: main_to_do_list_db
     volumes:
       - postgresdata:/var/lib/postgresql/data
+    environment:
+      DB_HOST=localhost
+      DB_USER=test_user
+      DB_PASS=test_password
     env_file:
       - main_service/.env-non-dev
     ports:
@@ -61,6 +64,10 @@ services:
     container_name: comments_db
     volumes:
       - postgresdata:/var/lib/postgresql/data
+    environment:
+      DB_HOST=localhost
+      DB_USER=test_user
+      DB_PASS=test_password
     env_file:
       - comments_service/.env-non-dev
     ports:
