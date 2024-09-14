@@ -49,9 +49,9 @@ services:
     volumes:
       - postgresdata:/var/lib/postgresql/data
     environment:
-      DB_HOST=localhost
-      DB_USER=test_user
-      DB_PASS=test_password
+      DB_HOST: localhost
+      DB_USER: test_user
+      DB_PASS: test_password
     env_file:
       - main_service/.env-non-dev
     ports:
@@ -65,9 +65,9 @@ services:
     volumes:
       - postgresdata:/var/lib/postgresql/data
     environment:
-      - DB_HOST=localhost
-      - DB_USER=test_user
-      - DB_PASS=test_password
+      DB_HOST: localhost
+      DB_USER: test_user
+      DB_PASS: test_password
     env_file:
       - comments_service/.env-non-dev
     ports:
