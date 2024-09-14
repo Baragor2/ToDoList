@@ -77,7 +77,7 @@ services:
       sh -c "celery -A main_service.app.celery_tasks.main_celery:celery beat --loglevel=INFO &&
              celery -A main_service.app.celery_tasks.main_celery:celery worker --loglevel=INFO"
     env_file:
-      - .env-non-dev
+      - main_service/.env-non-dev
     depends_on:
       - redis
 
