@@ -1,14 +1,14 @@
 import aioredis
 from fastapi import FastAPI
 
-from comments_service.app.comments.router import router as comments_router
+from app.comments.router import router as comments_router
 
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
 
 from redis import asyncio as aioredis
 
-from comments_service.app.config import settings
+from app.config import settings
 
 app = FastAPI()
 

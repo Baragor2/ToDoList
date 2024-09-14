@@ -1,6 +1,6 @@
 from sqlalchemy import insert, select
 
-from comments_service.app.database import async_session_maker
+from app.database import async_session_maker
 
 
 class BaseDAO:

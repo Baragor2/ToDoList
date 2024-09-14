@@ -4,8 +4,8 @@ from uuid import UUID
 from fastapi import APIRouter, status
 from fastapi_cache.decorator import cache
 
-from comments_service.app.comments.dao import CommentsDAO
-from comments_service.app.comments.schemas import SComment, SCommentPatch
+from app.comments.dao import CommentsDAO
+from app.comments.schemas import SComment, SCommentPatch
 
 router = APIRouter(
     prefix="/comments",

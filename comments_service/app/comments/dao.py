@@ -3,11 +3,11 @@ from uuid import uuid4, UUID
 
 from sqlalchemy import delete, and_, update
 
-from comments_service.app.comments.models import Comments
-from comments_service.app.comments.schemas import SComment, SCommentPatch
-from comments_service.app.dao.base import BaseDAO
-from comments_service.app.database import async_session_maker
-from comments_service.app.exceptions import CommentsException
+from app.comments.models import Comments
+from app.comments.schemas import SComment, SCommentPatch
+from app.dao.base import BaseDAO
+from app.database import async_session_maker
+from app.exceptions import CommentsException
 
 
 class CommentsDAO(BaseDAO):
