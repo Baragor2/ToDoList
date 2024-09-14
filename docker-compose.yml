@@ -33,7 +33,7 @@ services:
       - comments_db
       - redis
     networks:
-      -dev
+      - dev
 
   bot:
     build:
@@ -42,7 +42,7 @@ services:
       - main_service
       - comments_service
     networks:
-      -dev
+      - dev
 
   main_to_do_list_db:
     image: postgres:16
