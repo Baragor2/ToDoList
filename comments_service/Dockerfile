@@ -2,7 +2,7 @@ FROM python:3.12
 
 #RUN mkdir /comments_service
 
-WORKDIR /app
+WORKDIR /comments_service
 
 COPY requirements.txt .
 
