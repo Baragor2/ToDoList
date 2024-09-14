@@ -80,6 +80,8 @@ services:
       - main_service/.env-non-dev
     depends_on:
       - redis
+      - main_to_do_list_db
+      - comments_db
 
 volumes:
   postgresdata:
