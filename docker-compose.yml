@@ -53,6 +53,8 @@ services:
       - main_service/.env-non-dev
     ports:
       - 5432:5432
+    networks:
+      - dev
 
   comments_db:
     image: postgres:16
@@ -63,10 +65,14 @@ services:
       - comments_service/.env-non-dev
     ports:
       - 5433:5432
+    networks:
+      - dev
 
   redis:
     image: redis:7
     container_name: to_do_list_redis
+    networks:
+      - dev
 
   celery:
     image: to_do_list_celery
@@ -82,6 +88,8 @@ services:
       - redis
       - main_to_do_list_db
       - comments_db
+    networks:
+      - dev
 
 volumes:
   postgresdata:
