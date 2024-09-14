@@ -8,14 +8,14 @@ from slowapi.middleware import SlowAPIMiddleware
 from sqladmin import Admin
 from redis import asyncio as aioredis
 
-from main_service.app.admin.auth import authentication_backend
-from main_service.app.admin.views import UsersAdmin, TasksAdmin, CategoriesAdmin
-from main_service.app.config import settings
-from main_service.app.database import engine
-from main_service.app.users.router import router as users_router
-from main_service.app.tasks.router import router as tasks_router
-from main_service.app.categories.router import router as categories_router
-from main_service.app.comments.router import router as comments_router
+from app.admin.auth import authentication_backend
+from app.admin.views import UsersAdmin, TasksAdmin, CategoriesAdmin
+from app.config import settings
+from app.database import engine
+from app.users.router import router as users_router
+from app.tasks.router import router as tasks_router
+from app.categories.router import router as categories_router
+from app.comments.router import router as comments_router
 
 app = FastAPI()
 

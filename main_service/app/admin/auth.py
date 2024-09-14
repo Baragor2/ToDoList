@@ -3,8 +3,8 @@ from sqladmin.authentication import AuthenticationBackend
 from starlette.requests import Request
 from starlette.responses import RedirectResponse
 
-from main_service.app.admin.utils import check_admin_role_for_admin_panel
-from main_service.app.users.auth import authenticate_user, create_access_token
+from app.admin.utils import check_admin_role_for_admin_panel
+from app.users.auth import authenticate_user, create_access_token
 
 
 class AdminAuth(AuthenticationBackend):

@@ -2,9 +2,9 @@ from fastapi import APIRouter, status, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
-from main_service.app.categories.dao import CategoriesDAO
-from main_service.app.categories.schemas import SCategory
-from main_service.app.users.dependencies import check_admin_role
+from app.categories.dao import CategoriesDAO
+from app.categories.schemas import SCategory
+from app.users.dependencies import check_admin_role
 
 router = APIRouter(
     prefix="/categories",

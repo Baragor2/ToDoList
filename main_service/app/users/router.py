@@ -2,12 +2,12 @@ from fastapi import APIRouter, status, Response, Depends, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
-from main_service.app.exceptions import ToDoListException
-from main_service.app.users.auth import get_password_hash, authenticate_user, create_access_token, check_tg_hash, \
+from app.exceptions import ToDoListException
+from app.users.auth import get_password_hash, authenticate_user, create_access_token, check_tg_hash, \
     authenticate_tg_user
-from main_service.app.users.dao import UsersDAO
-from main_service.app.users.dependencies import get_current_user
-from main_service.app.users.schemas import SProfile, SAuthUser, STgLogin, STgRegister, SLoginUser
+from app.users.dao import UsersDAO
+from app.users.dependencies import get_current_user
+from app.users.schemas import SProfile, SAuthUser, STgLogin, STgRegister, SLoginUser
 
 router = APIRouter(
      prefix="/users",

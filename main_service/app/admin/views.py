@@ -1,8 +1,8 @@
 from sqladmin import ModelView
 
-from main_service.app.categories.models import Categories
-from main_service.app.tasks.models import Tasks
-from main_service.app.users.models import Users
+from app.categories.models import Categories
+from app.tasks.models import Tasks
+from app.users.models import Users
 
 
 class UsersAdmin(ModelView, model=Users):

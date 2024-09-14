@@ -4,13 +4,13 @@ from datetime import datetime, UTC, timedelta
 
 from asgiref.sync import async_to_sync
 
-from main_service.app.config import settings
-from main_service.app.tasks.dao import TasksDAO
-from main_service.app.tasks.schemas import STask
-from main_service.app.users.dao import UsersDAO
-from main_service.app.users.schemas import SUser
-from main_service.app.celery_tasks.email_templates import create_task_started_template
-from main_service.app.celery_tasks.main_celery import celery
+from app.config import settings
+from app.tasks.dao import TasksDAO
+from app.tasks.schemas import STask
+from app.users.dao import UsersDAO
+from app.users.schemas import SUser
+from app.celery_tasks.email_templates import create_task_started_template
+from app.celery_tasks.main_celery import celery
 
 
 @celery.task

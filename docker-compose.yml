@@ -28,7 +28,7 @@ services:
 
   comments_service:
     build:
-      context: .
+      context: ./comments_service
     depends_on:
       - comments_db
       - redis

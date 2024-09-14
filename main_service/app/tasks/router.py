@@ -3,13 +3,13 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 from sqlalchemy.exc import DBAPIError
 
-from main_service.app.categories.dao import CategoriesDAO
-from main_service.app.exceptions import WrongTimeException
-from main_service.app.tasks.dao import TasksDAO
-from main_service.app.tasks.schemas import SCreateTask
-from main_service.app.users.auth import get_tg_user
-from main_service.app.users.dependencies import get_current_user
-from main_service.app.users.schemas import SProfile, STgLogin
+from app.categories.dao import CategoriesDAO
+from app.exceptions import WrongTimeException
+from app.tasks.dao import TasksDAO
+from app.tasks.schemas import SCreateTask
+from app.users.auth import get_tg_user
+from app.users.dependencies import get_current_user
+from app.users.schemas import SProfile, STgLogin
 
 
 limiter = Limiter(key_func=get_remote_address)

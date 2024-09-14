@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     SMTP_PASS: str
 
     class Config:
-        env_file = "main_service/.env-non-dev"
+        env_file = ".env-non-dev"
 
 
 settings = Settings()

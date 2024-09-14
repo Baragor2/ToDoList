@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from main_service.app.database import Base
+from app.database import Base
 
 
 class Categories(Base):

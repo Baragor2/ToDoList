@@ -5,12 +5,12 @@ from fastapi import APIRouter, status, Depends, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
-from main_service.app.comments.schemas import SCommentCreate, SCommentDelete, SCommentPatch
-from main_service.app.config import comments_settings
-from main_service.app.tasks.dao import TasksDAO
-from main_service.app.users.auth import get_tg_user
-from main_service.app.users.dependencies import get_current_user
-from main_service.app.users.schemas import SProfile, STgLogin
+from app.comments.schemas import SCommentCreate, SCommentDelete, SCommentPatch
+from app.config import comments_settings
+from app.tasks.dao import TasksDAO
+from app.users.auth import get_tg_user
+from app.users.dependencies import get_current_user
+from app.users.schemas import SProfile, STgLogin
 
 router = APIRouter(
     prefix="/comments",

@@ -3,11 +3,11 @@ from datetime import datetime, UTC
 from fastapi import Request
 from jose import jwt, JWTError
 
-from main_service.app.config import auth_settings, settings
-from main_service.app.exceptions import NotEnoughRightsException, IncorrectTokenFormatException, TokenExpiredException, \
+from app.config import auth_settings, settings
+from app.exceptions import NotEnoughRightsException, IncorrectTokenFormatException, TokenExpiredException, \
     UserIsNotPresentException, TokenAbsentException
-from main_service.app.users.dao import UsersDAO
-from main_service.app.users.schemas import SUser
+from app.users.dao import UsersDAO
+from app.users.schemas import SUser
 
 
 async def check_admin_role_for_admin_panel(request: Request) -> SUser:

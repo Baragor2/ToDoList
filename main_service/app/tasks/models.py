@@ -3,8 +3,8 @@ from datetime import datetime
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from main_service.app.database import Base
-from main_service.app.categories.models import Categories # noqa
+from app.database import Base
+from app.categories.models import Categories # noqa
 
 
 class Tasks(Base):

@@ -1,9 +1,9 @@
 from sqlalchemy import update, and_
 
-from main_service.app.database import async_session_maker
-from main_service.app.exceptions import UserAlreadyExistsException
-from main_service.app.users.models import Users
-from main_service.app.dao.base import BaseDAO
+from app.database import async_session_maker
+from app.exceptions import UserAlreadyExistsException
+from app.users.models import Users
+from app.dao.base import BaseDAO
 
 
 class UsersDAO(BaseDAO):

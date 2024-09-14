@@ -1,11 +1,11 @@
 from sqlalchemy import delete, update
 from sqlalchemy.exc import IntegrityError
 
-from main_service.app.categories.models import Categories
-from main_service.app.categories.schemas import SCategory
-from main_service.app.dao.base import BaseDAO
-from main_service.app.database import async_session_maker
-from main_service.app.exceptions import (NoSuchCategoryException, CategoryAlreadyExistsException,
+from app.categories.models import Categories
+from app.categories.schemas import SCategory
+from app.dao.base import BaseDAO
+from app.database import async_session_maker
+from app.exceptions import (NoSuchCategoryException, CategoryAlreadyExistsException,
                                          ThereAreTasksWithCategoryException)
 
 

@@ -1,7 +1,7 @@
 from celery import Celery
 from celery.schedules import crontab
 
-from main_service.app.config import settings
+from app.config import settings
 
 celery = Celery(
     "tasks",

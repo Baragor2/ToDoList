@@ -5,10 +5,10 @@ import bcrypt
 from passlib.context import CryptContext
 import jwt
 
-from main_service.app.config import settings, auth_settings
-from main_service.app.exceptions import IncorrectUsernameOrPasswordException, IncorrectTgHashException
-from main_service.app.users.dao import UsersDAO
-from main_service.app.users.schemas import STgRegister
+from app.config import settings, auth_settings
+from app.exceptions import IncorrectUsernameOrPasswordException, IncorrectTgHashException
+from app.users.dao import UsersDAO
+from app.users.schemas import STgRegister
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

@@ -4,11 +4,11 @@ from typing import Annotated
 from jose import jwt, JWTError
 from fastapi import Cookie, Request
 
-from main_service.app.config import settings, auth_settings
-from main_service.app.exceptions import IncorrectTokenFormatException, TokenExpiredException, \
+from app.config import settings, auth_settings
+from app.exceptions import IncorrectTokenFormatException, TokenExpiredException, \
     UserIsNotPresentException, TokenAbsentException, NotEnoughRightsException
-from main_service.app.users.dao import UsersDAO
-from main_service.app.users.schemas import SUser
+from app.users.dao import UsersDAO
+from app.users.schemas import SUser
 
 
 async def get_token(request: Request) -> Annotated[str, Cookie]:

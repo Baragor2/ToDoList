@@ -2,9 +2,9 @@ FROM python:3.12
 
 #RUN mkdir /comments_service
 
-WORKDIR /comments_service
+WORKDIR /app
 
-COPY comments_service/requirements.txt .
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 

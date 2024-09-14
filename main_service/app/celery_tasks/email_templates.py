@@ -3,7 +3,7 @@ from email.message import EmailMessage
 
 from pydantic import EmailStr
 
-from main_service.app.config import settings
+from app.config import settings
 
 
 def create_task_started_template(

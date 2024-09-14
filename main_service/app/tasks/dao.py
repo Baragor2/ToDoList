@@ -1,10 +1,10 @@
 from sqlalchemy import delete, and_, update
 
-from main_service.app.database import async_session_maker
-from main_service.app.exceptions import TaskAlreadyExistsException, NoSuchTaskException
-from main_service.app.tasks.models import Tasks
-from main_service.app.dao.base import BaseDAO
-from main_service.app.tasks.schemas import STask, SCreateTask
+from app.database import async_session_maker
+from app.exceptions import TaskAlreadyExistsException, NoSuchTaskException
+from app.tasks.models import Tasks
+from app.dao.base import BaseDAO
+from app.tasks.schemas import STask, SCreateTask
 
 
 class TasksDAO(BaseDAO):
