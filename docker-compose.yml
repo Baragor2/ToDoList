@@ -29,11 +29,11 @@ services:
   comments_service:
     build:
       context: ./comments_service
-      depends_on:
-        - comments_db
-        - redis
-      networks:
-        -dev
+    depends_on:
+      - comments_db
+      - redis
+    networks:
+      -dev
 
   bot:
     build:
