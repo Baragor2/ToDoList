@@ -1,14 +1,16 @@
 FROM python:3.12
 
 #RUN mkdir /main_service
-#
-WORKDIR /ToDoList
+
+WORKDIR /main_service
 
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
 COPY . .
+
+ENV PYTHONPATH=/main_service
 
 RUN alembic upgrade head
 
