@@ -1,6 +1,6 @@
 FROM python:3.12
 
-#RUN mkdir /comments_service
+RUN mkdir /comments_service
 
 WORKDIR /comments_service
 
@@ -9,8 +9,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-
-ENV PYTHONPATH=/comments_service
 
 RUN alembic upgrade head
 
