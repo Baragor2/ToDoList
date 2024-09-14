@@ -4,7 +4,7 @@ FROM python:3.12
 
 WORKDIR /comments_service
 
-COPY requirements.txt .
+COPY comments_service/requirements.txt .
 
 RUN pip install -r requirements.txt
 
