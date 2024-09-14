@@ -7,10 +7,10 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from main_service.app.database import Base, DATABASE_URL
-from main_service.app.categories.models import Categories # noqa
-from main_service.app.tasks.models import Tasks # noqa
-from main_service.app.users.models import Users # noqa
+from app.database import Base, DATABASE_URL
+from app.categories.models import Categories # noqa
+from app.tasks.models import Tasks # noqa
+from app.users.models import Users # noqa
 
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 
