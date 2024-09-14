@@ -1,8 +1,6 @@
 FROM python:3.12
 
-RUN mkdir /main_service
-
-WORKDIR .
+WORKDIR /app
 
 COPY requirements.txt .
 
