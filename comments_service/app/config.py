@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     REDIS_PORT: str
 
     class Config:
-        env_file = "comments_service/.env-non-dev"
+        env_file = ".env-non-dev"
 
 
 settings = Settings()
