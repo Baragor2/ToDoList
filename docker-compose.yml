@@ -38,11 +38,11 @@ services:
   bot:
     build:
       context: ./bot
-      depends_on:
-        - main_service
-        - comments_service
-      networks:
-        -dev
+    depends_on:
+      - main_service
+      - comments_service
+    networks:
+      -dev
 
   main_to_do_list_db:
     image: postgres:16
