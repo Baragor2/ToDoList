@@ -26,7 +26,7 @@ auth_settings = AuthSettings()
 
 
 class MainBackend(BaseSettings):
-    COMMENTS_API_ROOT: str = "http://localhost:8000/"
+    COMMENTS_API_ROOT: str = "http://0.0.0.0:8000/"
 
 
 main_backend_settings = MainBackend()

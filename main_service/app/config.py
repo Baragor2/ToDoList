@@ -39,7 +39,7 @@ auth_settings = AuthSettings()
 
 
 class CommentsSettings(BaseSettings):
-    COMMENTS_API_ROOT: str = "http://localhost:8001/"
+    COMMENTS_API_ROOT: str = "http://0.0.0.0:8001/"
 
 
 comments_settings = CommentsSettings()
