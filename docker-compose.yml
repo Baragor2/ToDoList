@@ -19,7 +19,7 @@ services:
     build:
       context: .
     depends_on:
-      - main_to_do_list_db
+#      - main_to_do_list_db
       - redis
       - celery
     networks:
@@ -29,7 +29,7 @@ services:
     build:
       context: ./comments_service
     depends_on:
-      - comments_db
+#      - comments_db
       - redis
     networks:
       - dev
@@ -43,37 +43,29 @@ services:
     networks:
       - dev
 
-  main_to_do_list_db:
-    image: postgres:16
-    container_name: main_to_do_list_db
-    volumes:
-      - postgresdata:/var/lib/postgresql/data
-    environment:
-      DB_HOST: main_to_do_list_db
-      DB_USER: test_user
-      DB_PASS: test_password
-    env_file:
-      - main_service/.env-non-dev
-    ports:
-      - 5432:5432
-    networks:
-      - dev
+#  main_to_do_list_db:
+#    image: postgres:16
+#    container_name: main_to_do_list_db
+#    volumes:
+#      - postgresdata:/var/lib/postgresql/data
+#    env_file:
+#      - main_service/.env-non-dev
+#    ports:
+#      - 5432:5432
+#    networks:
+#      - dev
 
-  comments_db:
-    image: postgres:16
-    container_name: comments_db
-    volumes:
-      - postgresdata:/var/lib/postgresql/data
-    environment:
-      DB_HOST: comments_db
-      DB_USER: test_user
-      DB_PASS: test_password
-    env_file:
-      - comments_service/.env-non-dev
-    ports:
-      - 5433:5432
-    networks:
-      - dev
+#  comments_db:
+#    image: postgres:16
+#    container_name: comments_db
+#    volumes:
+#      - postgresdata:/var/lib/postgresql/data
+#    env_file:
+#      - comments_service/.env-non-dev
+#    ports:
+#      - 5433:5432
+#    networks:
+#      - dev
 
   redis:
     image: redis:7
@@ -93,8 +85,8 @@ services:
       - main_service/.env-non-dev
     depends_on:
       - redis
-      - main_to_do_list_db
-      - comments_db
+#      - main_to_do_list_db
+#      - comments_db
     networks:
       - dev
 
