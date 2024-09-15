@@ -20,7 +20,7 @@ services:
       context: ./main_service
     depends_on:
 #      - main_to_do_list_db
-      - redis
+#      - redis
       - celery
     networks:
       - dev
@@ -28,9 +28,9 @@ services:
   comments_service:
     build:
       context: ./comments_service
-    depends_on:
-#      - comments_db
-      - redis
+#    depends_on:
+##      - comments_db
+#      - redis
     networks:
       - dev
 
@@ -67,11 +67,11 @@ services:
 #    networks:
 #      - dev
 
-  redis:
-    image: redis:7
-    container_name: to_do_list_redis
-    networks:
-      - dev
+#  redis:
+#    image: redis:7
+#    container_name: to_do_list_redis
+#    networks:
+#      - dev
 
   celery:
     image: to_do_list_celery
@@ -83,8 +83,8 @@ services:
              celery -A app.celery_tasks.main_celery:celery worker --loglevel=INFO"
     env_file:
       - main_service/.env-non-dev
-    depends_on:
-      - redis
+#    depends_on:
+#      - redis
 #      - main_to_do_list_db
 #      - comments_db
     networks:
