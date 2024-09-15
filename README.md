@@ -37,7 +37,7 @@ REDIS_PORT=text
 #### Создайте файл .env в папке bot и задайте в нём параметры в формате:  
 BOT_TOKEN=text - токен бота(получаем при создании бота в BotFather)
 
-TG_HASH_ALGORITHM=text -  - алгоритм для хэширования telegram id (тот же, что и в main_service)
+TG_HASH_ALGORITHM=text - алгоритм для хэширования telegram id (тот же, что и в main_service)
 
 
 ### 3. Секретные ключи
