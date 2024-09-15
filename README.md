@@ -61,4 +61,5 @@ python -m app.main
 
 #### Запустите celery из папки main_service:
 celery -A app.celery_tasks.main_celery:celery beat --loglevel=INFO
+
 celery -A app.celery_tasks.main_celery:celery worker --loglevel=info  (При запуске на windows добавить -P solo)
