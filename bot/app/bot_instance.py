@@ -1,6 +1,6 @@
 from aiogram import Bot
 
-from bot.app.config import settings
+from app.config import settings
 
 
 bot = Bot(

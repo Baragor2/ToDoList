@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     TG_HASH_ALGORITHM: str
 
     class Config:
-        env_file = "bot/.env"
+        env_file = ".env"
 
 
 settings = Settings()

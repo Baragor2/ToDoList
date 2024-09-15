@@ -3,7 +3,7 @@ import hmac
 import httpx
 from httpx import Response
 
-from bot.app.config import auth_settings, settings, main_backend_settings
+from app.config import auth_settings, settings, main_backend_settings
 
 
 async def generate_tg_hash(tg_id: str) -> str:

@@ -3,9 +3,9 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from bot.app.users.auth import login_user, register_user
-from bot.app.users.keyboards import main_keyboard
-from bot.app.users.states import Registration
+from app.users.auth import login_user, register_user
+from app.users.keyboards import main_keyboard
+from app.users.states import Registration
 
 router = Router()
 

@@ -3,11 +3,11 @@ from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from bot.app.config import main_backend_settings
-from bot.app.tasks.json_parsing import parse_get_tasks_json
-from bot.app.tasks.states import CreateTask
-from bot.app.tasks.utils import check_time_form
-from bot.app.users.auth import generate_tg_hash, get_tg_user_login
+from app.config import main_backend_settings
+from app.tasks.json_parsing import parse_get_tasks_json
+from app.tasks.states import CreateTask
+from app.tasks.utils import check_time_form
+from app.users.auth import generate_tg_hash, get_tg_user_login
 
 router = Router()
 

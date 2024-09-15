@@ -3,10 +3,10 @@ import logging
 
 from aiogram import Dispatcher
 
-from bot.app.bot_instance import bot
-from bot.app.users.handler import router as user_router
-from bot.app.tasks.handler import router as tasks_router
-from bot.app.comments.handler import router as comments_router
+from app.bot_instance import bot
+from app.users.handler import router as user_router
+from app.tasks.handler import router as tasks_router
+from app.comments.handler import router as comments_router
 
 
 def register_routers(dp: Dispatcher) -> None:
@@ -24,7 +24,7 @@ async def main() -> None:
     try:
         await dp.start_polling(bot)
     finally:
-        await bot.session.close()
+        await session.close()
 
 
 if __name__ == '__main__':

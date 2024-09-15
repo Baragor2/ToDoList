@@ -3,10 +3,10 @@ from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from bot.app.comments.json_parsing import parse_get_comments_json
-from bot.app.comments.states import GetComments, CreateComment
-from bot.app.config import main_backend_settings
-from bot.app.users.auth import generate_tg_hash, get_tg_user_login
+from app.comments.json_parsing import parse_get_comments_json
+from app.comments.states import GetComments, CreateComment
+from app.config import main_backend_settings
+from app.users.auth import generate_tg_hash, get_tg_user_login
 
 router = Router()
 
