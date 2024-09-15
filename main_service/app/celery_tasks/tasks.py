@@ -1,6 +1,5 @@
-import logging
 import smtplib
-from datetime import datetime, UTC, timedelta
+from datetime import datetime, timedelta
 
 from asgiref.sync import async_to_sync
 

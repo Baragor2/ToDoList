@@ -79,8 +79,8 @@ services:
       context: ./main_service
     container_name: to_do_list_celery
     command: >
-      sh -c "celery -A main_service.app.celery_tasks.main_celery:celery beat --loglevel=INFO &&
-             celery -A main_service.app.celery_tasks.main_celery:celery worker --loglevel=INFO"
+      sh -c "celery -A app.celery_tasks.main_celery:celery beat --loglevel=INFO &&
+             celery -A app.celery_tasks.main_celery:celery worker --loglevel=INFO"
     env_file:
       - main_service/.env-non-dev
     depends_on:
