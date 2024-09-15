@@ -19,8 +19,8 @@ services:
     build:
       context: ./main_service
     depends_on:
-#      - main_to_do_list_db
-#      - redis
+      - main_to_do_list_db
+      - redis
       - celery
     networks:
       - dev
@@ -28,9 +28,9 @@ services:
   comments_service:
     build:
       context: ./comments_service
-#    depends_on:
-##      - comments_db
-#      - redis
+    depends_on:
+      - comments_db
+      - redis
     networks:
       - dev
 
@@ -43,35 +43,35 @@ services:
     networks:
       - dev
 
-#  main_to_do_list_db:
-#    image: postgres:16
-#    container_name: main_to_do_list_db
-#    volumes:
-#      - postgresdata:/var/lib/postgresql/data
-#    env_file:
-#      - main_service/.env-non-dev
-#    ports:
-#      - 5432:5432
-#    networks:
-#      - dev
+  main_to_do_list_db:
+    image: postgres:16
+    container_name: main_to_do_list_db
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    env_file:
+      - main_service/.env-non-dev
+    ports:
+      - 5432:5432
+    networks:
+      - dev
 
-#  comments_db:
-#    image: postgres:16
-#    container_name: comments_db
-#    volumes:
-#      - postgresdata:/var/lib/postgresql/data
-#    env_file:
-#      - comments_service/.env-non-dev
-#    ports:
-#      - 5433:5432
-#    networks:
-#      - dev
+  comments_db:
+    image: postgres:16
+    container_name: comments_db
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    env_file:
+      - comments_service/.env-non-dev
+    ports:
+      - 5433:5432
+    networks:
+      - dev
 
-#  redis:
-#    image: redis:7
-#    container_name: to_do_list_redis
-#    networks:
-#      - dev
+  redis:
+    image: redis:7
+    container_name: to_do_list_redis
+    networks:
+      - dev
 
   celery:
     image: to_do_list_celery
@@ -83,10 +83,10 @@ services:
              celery -A app.celery_tasks.main_celery:celery worker --loglevel=INFO"
     env_file:
       - main_service/.env-non-dev
-#    depends_on:
-#      - redis
-#      - main_to_do_list_db
-#      - comments_db
+    depends_on:
+      - redis
+      - main_to_do_list_db
+      - comments_db
     networks:
       - dev
 
