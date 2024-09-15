@@ -17,7 +17,7 @@ services:
 
   main_service:
     build:
-      context: .
+      context: ./main_service
     depends_on:
 #      - main_to_do_list_db
       - redis
